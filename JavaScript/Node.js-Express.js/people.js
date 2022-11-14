@@ -1,4 +1,4 @@
-const people = ["georgi", "gahov", "milena", "preshelkova"];
+const people = ["John", "Doe", "Jane", "Doe"];
 const ages = [20, 25, 30, 35];
 
 console.log(people);
