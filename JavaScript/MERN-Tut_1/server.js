@@ -40,11 +40,14 @@ app.get('/', (req, res) => {
 
 app.post('/create', (req, res) => {
     // console.log(req.body)
+    // if (req.body.title === "" || req.body.description === "") {
+    //     return res.status(400).json({message: "Empty fields!"});
+    // }
     Post.create({
         title: req.body.title,
         description: req.body.description
     })
-        // .then(doc => console.log(doc))
+        .then(doc => console.log(doc))
         .catch((err) => {
             console.log(err)
         })

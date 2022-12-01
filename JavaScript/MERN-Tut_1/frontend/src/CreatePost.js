@@ -23,10 +23,19 @@ const CreatePost = () => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        axios.post("/create", post)
-            .then((res) => console.log(res))
-            .then((err) => console.log(err));
-        navigate("posts");
+        if (post.title === "" || post.description === "") {
+            alert("Empty fileds!");
+            return false;
+        } else {
+            axios.post("/create", post)
+                .then((res) => console.log(res))
+                .then((err) => console.log(err));
+            navigate("posts");
+        }
+        // axios.post("/create", post)
+        // .then((res) => console.log(res))
+        // .catch((err) => console.log(err));
+        // navigate("posts");
     }
 
     return (
