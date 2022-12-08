@@ -28,7 +28,7 @@ const postSchema = mongoose.Schema({
         type: String
     },
     description: {
-        type: String
+        type: String,
     }
 });
 
